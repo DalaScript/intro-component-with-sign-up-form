@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Intro Component With Sign Up Form | Frontend Mentor</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
+
 <body>
+  <main>
+    <section class="intro">
+      <h1 class="intro__title">
+        Learn to code by watching others
+      </h1>
+      <p class="intro__text">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+        understanding how developers think is invaluable.
+      </p>
+    </section>
 
-  Learn to code by watching others
+    <section class="form-section">
+      <div class="promo">
+        <p>
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </p>
+      </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+      <form class="form" id="signup-form" novalidate>
+        <div class="form__group">
+          <input type="text" name="firstname" placeholder="First Name" required>
+          <span class="error-msg"></span>
+        </div>
 
-  Try it free 7 days then $20/mo. thereafter
+        <div class="form__group">
+          <input type="text" name="lastname" placeholder="Last Name" required>
+          <span class="error-msg"></span>
+        </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+        <div class="form__group">
+          <input type="text" name="email" placeholder="Email Address" required>
+          <span class="error-msg"></span>
+        </div>
 
-  Claim your free trial 
+        <div class="form__group">
+          <input type="text" name="password" placeholder="Password" required>
+          <span class="error-msg"></span>
+        </div>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+        <button class="btn" type="submit">Claim your free trial</button>
+
+        <p class="form__terms">
+          By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+        </p>
+      </form>
+    </section>
+  </main>
+  <script src=""></script>
 </body>
+
 </html>
