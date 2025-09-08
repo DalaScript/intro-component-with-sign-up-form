@@ -1,7 +1,234 @@
+/* || Fonts ('Poppins')
+ *************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* || Global Variables
+ *************************/
+:root {
+    /* || Colors
+     *************************/
+    --red: #FF7979;
+    --green: #38CC8B;
+    --blue: #5E54A4;
+    --dark-blue: #3D3B48;
+    --grayish-blue: #BAB7D4;
+    --white: #FFFFFF;
+}
+
+/* || SCSS Alias
+ *************************/
+$red: var(--red);
+$green: var(--green);
+$blue: var(--blue);
+$dark-blue: var(--dark-blue);
+$grayish-blue: var(--grayish-blue);
+$white: var(--white);
+
 /* || Reset
  *************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* || Body Element
+ *************************/
+body {
+    padding: 5.5rem 1.5rem 4.25rem;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+
+    background: $red url("../images/bg-intro-mobile.png") no-repeat top/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $white;
+}
+
+main {
+    max-width: 400px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro__title {
+    margin-bottom: 1rem;
+    height: 80px;
+    
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: -0.018125rem;
+
+    color: $white;
+}
+
+.intro__text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+.promo {
+    margin-bottom: 1.5rem;
+    padding: 1.125rem 4.125rem;
+    border-radius: 0.625rem;
+    background-color: $blue;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.promo p {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    text-align: center;
+    letter-spacing: 0.016875rem;
+    color: $white;
+}
+
+.form {
+    padding: 1.5rem;
+    background-color: $white;
+    border-radius: 0.625rem;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.15);
+    color: $dark-blue;
+    text-align: left;
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form__group input {
+    padding: 0.875rem 1.15rem;
+    border: 1px solid $grayish-blue;
+    width: 100%;
+
+    border-radius: 0.3125rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    outline: none;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+
+    color: $dark-blue;
+}
+
+.form__group input::placeholder {
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.form__group input:focus {
+    border-color: $dark-blue;
+}
+
+.error-msg {
+    margin-top: 0.25rem;
+
+    display: none;
+
+    font-size: 0.75rem;
+    color: $red;
+    text-align: right;
+}
+
+.form__group.error input {
+    border-color: $red;
+}
+
+.form__group.error .error-msg {
+    display: block;
+}
+
+.btn {
+    padding: 0.9375rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.3125rem;
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.09);
+
+    background-color: $green;
+    color: $white;
+
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.form__terms {
+    margin: 0.5rem 0.9375rem 0;
+
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.3125rem;
+    color: $grayish-blue;
+    text-align: center;
+}
+
+.form__terms a {
+    color: $red;
+
+    font-weight: 700;
+    font-size: 0.6875rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        background: $red url("../images/bg-intro-desktop.png") no-repeat top/cover;
+    }
+
+    main {
+        max-width: 1100px;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .intro {
+        flex: 1;
+
+        text-align: left;
+    }
+
+    .intro__title {
+        font-size: 2.5rem;
+    }
+
+    .form-section {
+        flex: 1;
+    }
 }
