@@ -59,7 +59,6 @@ main {
 
 .intro__title {
   margin-bottom: 1rem;
-  height: 80px;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.5rem;
@@ -116,6 +115,7 @@ main {
   line-height: 26px;
   letter-spacing: 0.25px;
   color: var(--dark-blue);
+  caret-color: var(--blue);
 }
 
 .form__group input::placeholder {
@@ -124,7 +124,7 @@ main {
 }
 
 .form__group input:focus {
-  border-color: var(--dark-blue);
+  border-color: var(--blue);
 }
 
 .error-msg {
@@ -186,22 +186,40 @@ main {
   }
 
   main {
-    max-width: 1100px;
+    max-width: 1110px;
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    gap: 2.8125rem;
   }
 
   .intro {
-    flex: 1;
+    flex: 1 1 525px;
     text-align: left;
   }
 
   .intro__title {
-    font-size: 2.5rem;
+    font-size: 3.125rem;
+    line-height: 4.09375rem;
+    letter-spacing: -0.0325rem;
+  }
+
+  .intro__text {
+    margin-bottom: 0.6875rem;
   }
 
   .form-section {
-    flex: 1;
+    flex: 1 1 540px;
+  }
+
+  .form {
+    padding: 2.5rem;
+  }
+
+  .form__group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form__terms {
+    line-height: 1.625rem;
   }
 }
